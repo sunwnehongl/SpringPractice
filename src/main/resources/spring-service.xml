@@ -10,5 +10,9 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <bean class="com.swh.spring.bean.service.impl.CompactDiscServiceImpl"></bean>
+    <bean id="compactDiscServiceImpl" class="com.swh.spring.bean.service.impl.CompactDiscServiceImpl"></bean>
+
+    <bean class="com.swh.spring.bean.service.impl.CDPlayerImpl">
+        <constructor-arg ref="compactDiscServiceImpl"></constructor-arg>
+    </bean>
 </beans>
